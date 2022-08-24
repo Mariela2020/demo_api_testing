@@ -11,10 +11,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2.3.4
+        with:
+          repository: Mariela2020/demo_e2e_ui_test
+      - name: node.js 12
+        uses: actions/setup-node@v2
+        with:
+          node-version: 12.x
+      - name: install dependencias
+        run: npm ci     
       - name: Cypress.io
         uses: cypress-io/github-action@v4.2.0
         with:
-          start: npm start
-
+          start: npm run test
+      
         
 
