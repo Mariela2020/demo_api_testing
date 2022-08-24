@@ -9,7 +9,7 @@ beforeEach( () => {
     .request('POST', '/todos/seed', todos)
 
   cy
-    .visit('localhost:3000');
+    .visit('localhost:5000');
 
 });
 
