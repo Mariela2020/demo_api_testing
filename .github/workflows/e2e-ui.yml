@@ -15,7 +15,23 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          start: npm start
+          start: npm start   
+      - name: Trigger Jenkins Job
+        uses: mickeygoussetorg/trigger-jenkins-job@v1
+        with:
+          jenkins-server: "${{ secrets.JENKINS_SERVER }}"
+          jenkins-job: "e2e_ui_test"
+          jenkins-username: ${{ secrets.JENKINS_USERNAME }}
+          jenkins-pat: ${{ secrets.JENKINS_PAT }}
+          poll-time: (60)
+          timeout-value: (120)
+
+
+
+
+
+        
+      
       
         
 
