@@ -16,13 +16,16 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           start: npm start   
-      - name: Build Jenkins job
-        uses: GoldenspearLLC/build-jenkins-job@1.0.0
+      - name: Jenkins Job Trigger
+        uses: estherk0/jenkins-trigger@1.0
         with:
-          jenkins-url: "http://jk.toctoc.com"
-          jenkins-token: "117673c0629e6073950ee567fe9c424bcb"
-          user: "mhurtado"        
-          job-path: "e2e_ui_test"
+          url: "http://jk.toctoc.com"
+          username: "mhurtado"
+          api_token: "11166a79f3b38c81b5aae603b808c2c974"
+          job_name: "e2e_ui_test"
+          parameter: "SuperSecret"
+          wait: true
+          timeout: 600
 
 
 
