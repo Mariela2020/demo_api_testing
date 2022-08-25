@@ -17,14 +17,12 @@ jobs:
         with:
           start: npm start   
       - name: Trigger Jenkins Job
-        uses: mickeygoussetorg/trigger-jenkins-job@v1
+        uses: estherk0/jenkins-trigger@1.0
         with:
-          jenkins-server: "${{ secrets.JENKINS_SERVER }}"
-          jenkins-job: "e2e_ui_test"
-          jenkins-username: ${{ secrets.JENKINS_USERNAME }}
-          jenkins-pat: ${{ secrets.JENKINS_PAT }}
-          poll-time: (60)
-          timeout-value: (120)
+          url: "${{ secrets.JENKINS_SERVER }}"
+          username: ${{ secrets.TOKEN_JENKINS_USERNAME }}
+          job_name: "e2e_ui_test"
+          timeout: 600
 
 
 
