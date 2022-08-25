@@ -16,15 +16,12 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           start: npm start   
-      - name: Trigger Jenkins Job
-        uses: estherk0/jenkins-trigger@1.0
+      - name: Trigger a Jenkins Job
+        uses: sbitio/trigger-jenkins-job@v1.3
         with:
-          url: "http://jk.toctoc.com/job/e2e_ui_test/"
-          username: "mhurtado"
-          api_token: "117673c0629e6073950ee567fe9c424bcb"
-          job_name: "e2e_ui_test"
-          wait: true
-          timeout: 600
+          JENKINS_USER: "mhurtado"
+          JENKINS_TOKEN: "117673c0629e6073950ee567fe9c424bcb"
+          JENKINS_HOST: "http://jk.toctoc.com/job/e2e_ui_test/build"
 
 
 
