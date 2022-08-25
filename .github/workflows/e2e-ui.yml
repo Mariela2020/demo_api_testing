@@ -16,13 +16,13 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           start: npm start   
-      - name: Trigger a Jenkins Job
-        uses: sbitio/trigger-jenkins-job@v1.3
+      - name: Build Jenkins job
+        uses: GoldenspearLLC/build-jenkins-job@1.0.0
         with:
-          JENKINS_USER: "mhurtado"
-          JENKINS_TOKEN: "117673c0629e6073950ee567fe9c424bcb"
-          JENKINS_HOST: "http://jk.toctoc.com"
-          JENKINS_JOB: "e2e_ui_test"
+          jenkins-url: "http://jk.toctoc.com"
+          jenkins-token: "117673c0629e6073950ee567fe9c424bcb"
+          user: "mhurtado"        
+          job-path: "e2e_ui_test"
 
 
 
