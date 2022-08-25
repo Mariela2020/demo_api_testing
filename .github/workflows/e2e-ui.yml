@@ -19,8 +19,8 @@ jobs:
       - name: Trigger Jenkins Job
         uses: estherk0/jenkins-trigger@1.0
         with:
-          url: "${{ secrets.JENKINS_SERVER }}"
-          username: ${{ secrets.TOKEN_JENKINS_USERNAME }}
+          url: "http://jk.toctoc.com/"
+          username: "117673c0629e6073950ee567fe9c424bcb"
           job_name: "e2e_ui_test"
           timeout: 600
 
