@@ -22,7 +22,7 @@ jobs:
           JENKINS_USER: "mhurtado"
           JENKINS_TOKEN: "117673c0629e6073950ee567fe9c424bcb"
           JENKINS_HOST: "http://jk.toctoc.com"
-          JENKINS_JOB: "e2e_ui_test/build"
+          JENKINS_JOB: "e2e_ui_test"
 
 
 
