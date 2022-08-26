@@ -18,7 +18,7 @@ jobs:
           username: "mhurtado" 
           token: "111d12bdfd6c06e3bb9f075780ecd01d35"
           job: "e2e_test"
-          params: "SuperSecret"
+      
           
 
 
