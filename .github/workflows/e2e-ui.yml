@@ -6,7 +6,6 @@ on:
     branches: 
     - '**'
     - '!desarrollo'
-    types: [closed]
 jobs:
   trigger:
     name: Triggering Jenkins Build [ Build-Portal ]
