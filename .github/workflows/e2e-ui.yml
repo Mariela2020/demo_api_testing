@@ -13,8 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger Build-Portal
-        uses: appleboy/jenkins-action@master
-        if: github.event.pull_request.merged == true   
+        uses: appleboy/jenkins-action@master 
         with:
           url: "http://127.0.0.1:8080/"
           user: "mhurtado" 
