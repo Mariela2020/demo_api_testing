@@ -21,7 +21,7 @@ jobs:
         with:
           jenkins_url: "http://localhost:8080"
           jenkins_user: "mhurtado" 
-          jenkins-token: "111d12bdfd6c06e3bb9f075780ecd01d35"
+          jenkins_token: "111d12bdfd6c06e3bb9f075780ecd01d35"
           job_name: "e2e_test"
           job_params: "SuperSecret" 
           job_timeout: 60
