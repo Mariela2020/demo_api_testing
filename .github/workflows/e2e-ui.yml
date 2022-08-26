@@ -16,7 +16,7 @@ jobs:
         uses: appleboy/jenkins-action@master
         if: github.event.pull_request.merged == true   
         with:
-          url: "http://localhost:8080/"
+          url: "http://127.0.0.1:8080/"
           user: "mhurtado" 
           token: "111d12bdfd6c06e3bb9f075780ecd01d35"
           job: "e2e_test"
