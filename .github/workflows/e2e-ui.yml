@@ -8,16 +8,17 @@ on:
     - '!desarrollo'
 jobs:
   trigger:
-    name: Triggering Jenkins Build [ Build-Portal ]
+    name: TriggerJenkinsBuild
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger Build-Portal
-        uses: appleboy/jenkins-action@v0.0.2 
+      - name: TriggerJenkinsBuild
+        uses: stigmelling/jenkins-action@v1.1 
         with:
-          url: "http://127.0.0.1:8080/"
-          user: "mhurtado" 
+          jenkinsUrl: "http://127.0.0.1:8080/"
+          username: "mhurtado" 
           token: "111d12bdfd6c06e3bb9f075780ecd01d35"
           job: "e2e_test"
+          params: "SuperSecret"
           
 
 
