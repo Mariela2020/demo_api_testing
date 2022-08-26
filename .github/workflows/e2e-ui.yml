@@ -6,27 +6,21 @@ on:
     branches: 
     - '**'
     - '!desarrollo'
+    types: [closed]
 jobs:
-  cypress-run:
+  trigger:
+    name: Triggering Jenkins Build [ Build-Portal ]
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2   
-      - name: Cypress run
-        uses: cypress-io/github-action@v2
+      - name: Trigger Build-Portal
+        uses: appleboy/jenkins-action@master
+        if: github.event.pull_request.merged == true   
         with:
-          start: npm start   
-      - name: Run Jenkins Job and get build result
-        uses: halilsafakkilic/jenkins-action@v1.0.0
-        with:
-          jenkins_url: "http://localhost:8080"
-          jenkins_user: "mhurtado" 
-          jenkins_token: "111d12bdfd6c06e3bb9f075780ecd01d35"
-          job_name: "e2e_test"
-          job_params: "SuperSecret" 
-          job_timeout: 60
-          async: false
-          debug: true
+          url: "http://localhost:8080/"
+          user: "mhurtado" 
+          token: "111d12bdfd6c06e3bb9f075780ecd01d35"
+          job: "e2e_test"
+          
 
 
 
