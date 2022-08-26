@@ -16,14 +16,20 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           start: npm start   
-      - name: Build Jenkins job
-        uses: GoldenspearLLC/build-jenkins-job@1.0.0
+      - name: Run Jenkins Job and get build result
+        uses: halilsafakkilic/jenkins-action@v1.0.0
         with:
           jenkins-url: "http://localhost:8080"
+          jenkins_user: "mhurtado" 
           jenkins-token: "111d12bdfd6c06e3bb9f075780ecd01d35"
-          user: "mhurtado"
-          job-path: "e2e_test"
-          job-params: "SuperSecret" 
+          job_name: "e2e_test"
+          job_params: "SuperSecret" 
+          job_timeout: 60
+          async: false
+          debug: true
+
+
+
           
 
 
