@@ -22,7 +22,8 @@ jobs:
           JENKINS_USER: "mhurtado"
           JENKINS_TOKEN: "111d12bdfd6c06e3bb9f075780ecd01d35"
           JENKINS_HOST: "http://localhost:8080"
-          JENKINS_JOB: "e2e_test/build"
+          JENKINS_JOB: "e2e_test"
+          JENKINS_PARAMS: "SuperSecret"
 
 
 
