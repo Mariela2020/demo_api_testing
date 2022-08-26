@@ -1,0 +1,38 @@
+name: Cypress Test
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: 
+    - '**'
+    - '!desarrollo'
+    types: [closed]
+jobs:
+  trigger:
+    name: Triggering Jenkins Build [ Build-Portal ]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Build-Portal
+        uses: appleboy/jenkins-action@master
+        if: github.event.pull_request.merged == true   
+        with:
+          url: "http://localhost:8080/"
+          user: "mhurtado" 
+          token: "111d12bdfd6c06e3bb9f075780ecd01d35"
+          job: "e2e_test"
+          
+
+
+
+          
+
+
+
+
+
+
+        
+      
+      
+        
+

@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "Testing TodoMVC using Cypress",
   "scripts": {
-    "start": "C:/testing_app/testing-lists/node_modules/.bin/json-server --static . data.json -m middleware.js --config json-server.json"
+    "start": "./node_modules/.bin/json-server --static . data.json -m middleware.js --config json-server.json",
+    "cypress-e2e": "npx cypress run"
   },
   "devDependencies": {
     "json-server": "^0.15.1",
     "sendmail": "^1.6.1"
+  },
+  "dependencies": {
+    "cypress": "^7.4.0"
   }
 }
