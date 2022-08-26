@@ -8,16 +8,16 @@ on:
     - '!desarrollo'
 jobs:
   trigger:
-    name: TriggerJenkinsBuild
+    name: Run test
     runs-on: ubuntu-latest
     steps:
-      - name: TriggerJenkinsBuild
-        uses: stigmelling/jenkins-action@v1.1 
+      - name: Build Jenkins job
+        uses: GoldenspearLLC/build-jenkins-job@1.0.0 
         with:
-          jenkinsUrl: "http://127.0.0.1:8080/"
-          username: "mhurtado" 
-          token: "111d12bdfd6c06e3bb9f075780ecd01d35"
-          job: "e2e_test"
+          jenkins-url: "http://127.0.0.1:8080/"
+          user: "mhurtado" 
+          jenkins-token: "111d12bdfd6c06e3bb9f075780ecd01d35"
+          job-path: "e2e_test"
       
           
 
