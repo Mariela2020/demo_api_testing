@@ -19,10 +19,10 @@ jobs:
       - name: Jenkins Job Trigger
         uses: estherk0/jenkins-trigger@1.0
         with:
-          url: "http://jk.toctoc.com"
+          url: "http://localhost:8080"
           username: "mhurtado"
-          api_token: "11166a79f3b38c81b5aae603b808c2c974"
-          job_name: "e2e_ui_test"
+          api_token: "111d12bdfd6c06e3bb9f075780ecd01d35"
+          job_name: "e2e_test"
           parameter: "SuperSecret"
           wait: true
           timeout: 600
