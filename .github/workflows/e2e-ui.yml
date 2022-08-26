@@ -1,23 +1,18 @@
-name: Cypress Test
-on:
-  push:
-    branches: [master]
-  pull_request:
-    branches: 
-    - '**'
-    - '!desarrollo'
+name: trigger jenkins job
+on: [push]
 jobs:
-  trigger:
-    name: Run test
+
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: Build Jenkins job
-        uses: GoldenspearLLC/build-jenkins-job@1.0.0 
-        with:
-          jenkins-url: "http://127.0.0.1:8080/"
-          user: "mhurtado" 
-          jenkins-token: "111d12bdfd6c06e3bb9f075780ecd01d35"
-          job-path: "e2e_test"
+    - name: trigger single Job
+      uses: appleboy/jenkins-action@master
+      with:
+        url: "http://localhost:8080/"
+        user: "mhurtado"
+        token: ${{ secrets.TOKEN }}
+        job: "e2e_test"
       
           
 
