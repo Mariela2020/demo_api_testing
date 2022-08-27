@@ -6,13 +6,14 @@ jobs:
     name: Build job jenkins
     runs-on: ubuntu-latest
     steps:
-    - name: trigger single Job
-      uses: appleboy/jenkins-action@master
+    - name: jenkins-action-parametrized
+      uses: enflo/jenkins-action@0.2.0
       with:
         url: http://localhost:8080/
         user: mhurtado
-        token: 111d12bdfd6c06e3bb9f075780ecd01d35
+        token: 113e8fe7672b0823013d81702a26bc41a8
         job: e2e_test
+        parameters: test
 
       
           
