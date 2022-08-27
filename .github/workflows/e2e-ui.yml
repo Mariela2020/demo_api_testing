@@ -12,7 +12,6 @@ jobs:
       uses: cypress-io/github-action@v2
       with:
         start: npm start 
-      if: github.event.pull_request.merged == true    
     - name: trigger single Job
       uses: appleboy/jenkins-action@master
       with:
