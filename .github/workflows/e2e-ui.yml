@@ -14,10 +14,10 @@ jobs:
       - name: Trigger Build-Portal
         uses: appleboy/jenkins-action@v0.0.2 
         with:
-          url: "http://127.0.0.1:8080/"
+          url: "http://jk.toctoc.com/"
           user: "mhurtado" 
-          token: "113e8fe7672b0823013d81702a26bc41a8"
-          job: "demo_api_testing"
+          token: "11166a79f3b38c81b5aae603b808c2c974"
+          job: "e2e_ui_test"
 
       
           
