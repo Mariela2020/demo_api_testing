@@ -6,6 +6,13 @@ jobs:
     name: Build job jenkins
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout
+      uses: actions/checkout@v2   
+    - name: Cypress run
+      uses: cypress-io/github-action@v2
+      with:
+        start: npm start 
+      if: github.event.pull_request.merged == true    
     - name: trigger single Job
       uses: appleboy/jenkins-action@master
       with:
