@@ -17,7 +17,7 @@ jobs:
           url: "http://127.0.0.1:8080/"
           user: "mhurtado" 
           token: "113e8fe7672b0823013d81702a26bc41a8"
-          job: "e2e_test"
+          job: "demo_api_testing"
 
       
           
