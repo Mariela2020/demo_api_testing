@@ -8,7 +8,7 @@ on:
     - '!desarrollo'
 jobs:
   trigger:
-    name: Triggering Jenkins Build [ Build-Portal ]
+    name: Triggering Jenkins Build
     runs-on: ubuntu-latest
     steps:
       - name: Trigger Build-Portal
