@@ -6,19 +6,13 @@ jobs:
     name: Build job jenkins
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2   
-    - name: Cypress run
-      uses: cypress-io/github-action@v2
-      with:
-        start: npm start 
     - name: trigger single Job
       uses: appleboy/jenkins-action@master
       with:
-        url: "http://localhost:8080/"
-        user: "mhurtado"
-        token: "111d12bdfd6c06e3bb9f075780ecd01d35"
-        job: "e2e_test"
+        url: http://localhost:8080/
+        user: mhurtado
+        token: 111d12bdfd6c06e3bb9f075780ecd01d35
+        job: e2e_test
 
       
           
