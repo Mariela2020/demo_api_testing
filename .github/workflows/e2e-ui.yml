@@ -23,7 +23,7 @@ jobs:
           url: "http://jk.toctoc.com/"
           user: "mhurtado"
           token: "11166a79f3b38c81b5aae603b808c2c974" 
-          job: "e2e_ui_test"
+          job: "e2e_ui_qa"
 
       
           
