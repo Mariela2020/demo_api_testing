@@ -20,9 +20,9 @@ jobs:
       - name: Trigger Build-Portal
         uses: appleboy/jenkins-action@v0.0.2 
         with:
-          url: "$secrets.JENKINS_SERVER"
+          url: "$schema"
           user: "mhurtado"
-          token: "11166a79f3b38c81b5aae603b808c2c974"
+          token: ${secrets.API_TOKEN} 
           job: "e2e_ui_test"
 
       
