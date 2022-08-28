@@ -1,4 +1,4 @@
-name: Test QA
+name: Prueba QA
 on:
   push:
     branches: [master]
@@ -20,10 +20,10 @@ jobs:
       - name: Trigger Build-Portal
         uses: appleboy/jenkins-action@v0.0.2 
         with:
-          url: "http://jk.toctoc.com/"
+          url: "${{ secrets.JENKINS_SERVER }}"
           user: "mhurtado"
           token: "11166a79f3b38c81b5aae603b808c2c974"
-          job: "e2e_test_qa"
+          job: "e2e_ui_test"
 
       
           
