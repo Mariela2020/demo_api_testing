@@ -20,8 +20,8 @@ jobs:
       - name: Trigger Build-Portal
         uses: appleboy/jenkins-action@v0.0.2 
         with:
-          url: "http://jk.toctoc.com/"
-          user: "mhurtado" 
+          url: ${JENKINS_SERVER}
+          user: ${JENKINS_USERNAME} 
           token: ${TOKEN}
           job: "e2e_ui_test"
 
