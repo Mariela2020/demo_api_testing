@@ -3,11 +3,7 @@
   "viewportHeight": 800,
   "defaultCommandTimeout": 4000,
   "video": false,
-  "baseUrl": "http://localhost:5000",
-  "$schema": "http://jk.toctoc.com/",
-  "env": {
-    "API_TOKEN": "11166a79f3b38c81b5aae603b808c2c974"
-     }
+  "baseUrl": "http://localhost:5000"
 
 }
 
