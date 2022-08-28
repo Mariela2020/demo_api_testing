@@ -21,8 +21,8 @@ jobs:
         uses: appleboy/jenkins-action@v0.0.2 
         with:
           url: "http://jk.toctoc.com/"
-          user: ${JENKINS_USERNAME} 
-          token: ${TOKEN}
+          user: "mhurtado" 
+          token: "11166a79f3b38c81b5aae603b808c2c974"
           job: "e2e_ui_test"
 
       
