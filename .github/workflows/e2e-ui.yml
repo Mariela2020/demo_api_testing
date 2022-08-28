@@ -22,7 +22,7 @@ jobs:
         with:
           url: "http://jk.toctoc.com/"
           user: "mhurtado" 
-          token: "11166a79f3b38c81b5aae603b808c2c974"
+          token: ${{ TOKEN }}
           job: "e2e_ui_test"
 
       
