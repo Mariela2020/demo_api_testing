@@ -1,4 +1,4 @@
-name: Cypress Test
+name: Test QA
 on:
   push:
     branches: [master]
@@ -8,7 +8,7 @@ on:
     - '!desarrollo'
 jobs:
   trigger:
-    name: Triggering Jenkins Build
+    name: Trigger Jenkins Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -22,7 +22,7 @@ jobs:
         with:
           url: "http://jk.toctoc.com/"
           user: "mhurtado" 
-          token: "11166a79f3b38c81b5aae603b808c2c974"
+          token: ${{ secrets.TOKEN }}
           job: "e2e_ui_test"
 
       
