@@ -6,6 +6,7 @@ on:
     branches: 
     - '**'
     - '!desarrollo'
+    types: [closed]
 jobs:
   trigger:
     name: Trigger Jenkins Build
@@ -20,10 +21,10 @@ jobs:
       - name: Trigger Build-Portal
         uses: appleboy/jenkins-action@v0.0.2 
         with:
-          url: "http://jk.toctoc.com/"
+          url: "http://localhost:8080/"
           user: "mhurtado"
-          token: "11166a79f3b38c81b5aae603b808c2c974" 
-          job: "e2e_test_qa"
+          token: "113e8fe7672b0823013d81702a26bc41a8" 
+          job: "e2e_ui_test"
 
       
           
