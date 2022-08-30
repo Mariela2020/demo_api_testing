@@ -7,24 +7,17 @@ on:
     - '**'
     - '!desarrollo'
 jobs:
-  trigger:
-    name: Jenkins Job Trigger
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2   
-      - name: Cypress run
-        uses: cypress-io/github-action@v2
-        with:
-          start: npm start
-      - name: Jenkins Job Trigger
-        uses: estherk0/jenkins-trigger@1.0 
+      - name: trigger single Job
+        uses: appleboy/jenkins-action@master
         with:
           url: "http://jk.toctoc.com/"
-          user_name: "mhurtado" 
-          api_token: "11166a79f3b38c81b5aae603b808c2c974"
-          job_name: "e2e_ui_test"
-          wait: 60
+          user: "mhurtado"
+          token: ${{ secrets.TOKEN }}
+          job: "e2e_ui_test"
 
 
       
