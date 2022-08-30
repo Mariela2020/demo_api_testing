@@ -8,7 +8,7 @@ on:
     - '!desarrollo'
 jobs:
   trigger:
-    name: Triggering Jenkins Build
+    name: Jenkins Job Trigger
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -17,13 +17,15 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           start: npm start
-      - name: Trigger Build-Portal
-        uses: appleboy/jenkins-action@v0.0.2 
+      - name: Jenkins Job Trigger
+        uses: estherk0/jenkins-trigger@1.0 
         with:
           url: "http://jk.toctoc.com/"
-          user: "mhurtado" 
-          token: ${secrets.token}
-          job: "e2e_ui_test"               
+          user_name: "mhurtado" 
+          api_token: "11166a79f3b38c81b5aae603b808c2c974"
+          job_name: "e2e_ui_test"
+          wait: 60
+
 
       
           
