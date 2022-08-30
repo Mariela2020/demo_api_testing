@@ -1,4 +1,4 @@
-name: Cypress Test
+name: Cypress_Test
 on:
   push:
     branches: [master]
