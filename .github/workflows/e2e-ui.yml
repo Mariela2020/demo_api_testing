@@ -1,4 +1,4 @@
-name: Prueba QA test
+name: Cypress Test
 on:
   push:
     branches: [master]
@@ -8,7 +8,7 @@ on:
     - '!desarrollo'
 jobs:
   trigger:
-    name: Trigger Jenkins Build
+    name: Triggering Jenkins Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -21,8 +21,8 @@ jobs:
         uses: appleboy/jenkins-action@v0.0.2 
         with:
           url: "http://jk.toctoc.com/"
-          user: "mhurtado"
-          token: "117673c0629e6073950ee567fe9c424bcb" 
+          user: "mhurtado" 
+          token: "11166a79f3b38c81b5aae603b808c2c974"
           job: "e2e_ui_test"
 
       
