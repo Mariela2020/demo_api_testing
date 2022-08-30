@@ -1,4 +1,4 @@
-name: Prueba QA
+name: Prueba QA test
 on:
   push:
     branches: [master]
