@@ -16,7 +16,7 @@ jobs:
         with:
           url: "http://jk.toctoc.com/"
           user: "mhurtado"
-          token: ${secrets.TOKEN}
+          token: "11490be9b1a5b70348250038049b793917"
           job: "e2e_ui_test"
 
 
