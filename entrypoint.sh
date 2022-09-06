@@ -2,4 +2,4 @@
 
 set -eu
 
-/bin/token
+/bin/mhurtado

@@ -1,4 +1,4 @@
-FROM appleboy/admin_user:1.3.2-linux-amd64
+FROM mhurtado/token:1.3.2-linux-amd64
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
