@@ -3,7 +3,10 @@
   "viewportHeight": 800,
   "defaultCommandTimeout": 4000,
   "video": false,
-  "baseUrl": "http://localhost:5000"
+  "baseUrl": "http://localhost:5000",
+  "secrets": {
+    "TOKEN": "11490be9b1a5b70348250038049b793917",
+  }
 
 }
 
