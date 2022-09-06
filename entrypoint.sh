@@ -2,4 +2,4 @@
 
 set -eu
 
-/bin/admin_user
+/bin/token
